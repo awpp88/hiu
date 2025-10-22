@@ -95,8 +95,7 @@ function App() {
       alt="Solar Music Group Logo"
       className="w-48 sm:w-56 md:w-64 mx-auto drop-shadow-[0_0_15px_rgba(255,140,0,0.4)]"
     />
-    {/* Optional text below the logo */}
-    <h2 className="mt-2 text-xl sm:text-2xl font-bold text-white tracking-tight text-center">
+    
       
     </h2>
   </div>
