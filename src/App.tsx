@@ -83,20 +83,20 @@ function App() {
       </div>
 
       {/* Logo - Top Center */}
-<div className="absolute top-5 left-1/2 -translate-x-1/2 z-20">
-  <div
-    className={`transition-all duration-1000 ease-out transform ${
-      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
-    }`}
-  >
-    <img
-      src="/logosolar.png"
-      alt="Solar Music Group Logo"
-      className="w-48 sm:w-56 md:w-64 mx-auto drop-shadow-[0_0_15px_rgba(255,140,0,0.4)]"
-    />
-  </div>
-</div>
-
+      <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20">
+        <div
+          className={`transition-all duration-1000 ease-out transform ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+          }`}
+        >
+          {/* Replace with your actual logo image */}
+          <img
+            src="/logosolar.png"
+            alt="Solar Music Group Logo"
+            className="w-48 sm:w-56 md:w-64 mx-auto drop-shadow-[0_0_15px_rgba(255,140,0,0.4)]"
+          />
+        </div>
+      </div>
 
       {/* Main Content */}
 <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 text-center">
