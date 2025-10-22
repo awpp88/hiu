@@ -83,7 +83,7 @@ function App() {
       </div>
 
       {/* Logo - Top Center */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 z-20">
+      <div className="absolute top-30 left-1/2 -translate-x-1/2 z-20">
         <div
           className={`transition-all duration-1000 ease-out transform ${
             isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
