@@ -83,205 +83,209 @@ function App() {
       </div>
 
       {/* Logo - Top Center */}
-<div className="absolute top10 left-1/2 -translate-x-1/2 z-20">
+      <div className="absolute top 10 left-1/2 -translate-x-1/2 z-20">
+        <div
+          className={`transition-all duration-1000 ease-out transform ${
+            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+          }`}
+        >
+          {/* Replace with your actual logo image */}
+          <img
+            src="/logo.png"
+            alt="Solar Music Group Logo"
+            className="w-48 sm:w-56 md:w-64 mx-auto drop-shadow-[0_0_15px_rgba(255,140,0,0.4)]"
+          />
+        </div>
+      </div>
+
+      {/* Main Content */}
+<div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 text-center">
   <div
-    className={`transition-all duration-1000 ease-out transform ${
-      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-4'
+    className={`transition-all duration-1500 ease-out transform ${
+      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
     }`}
   >
-    {/* Replace with your actual logo image */}
-    <img
-      src="/logosolar.png"
-      alt="Solar Music Group Logo"
-      className="w-48 sm:w-56 md:w-64 mx-auto drop-shadow-[0_0_15px_rgba(255,140,0,0.4)]"
+    {/* Main Heading */}
+    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-[#FFD166] drop-shadow-[0_0_18px_rgba(255,200,60,0.7)] leading-tight max-w-4xl">
+      Independent record label &<br />
+      distributor.
+    </h1>
 
-      
-    </h2>
+    {/* Description */}
+    <p className="text-lg md:text-xl text-[#FFE29A] drop-shadow-[0_0_10px_rgba(255,200,60,0.5)] mb-8 max-w-3xl mx-auto font-light leading-relaxed">
+      Solar Music Group uncovers hidden potential in music, turning legal
+      <br className="hidden md:block" />
+      challenges into opportunities for both artists and brands. Join our team
+      <br className="hidden md:block" />
+      of 30+ talented artists today!
+    </p>
+
+    {/* Established */}
+    <p className="text-sm text-[#FFD166] drop-shadow-[0_0_8px_rgba(255,200,60,0.6)] mb-10 tracking-wide">
+      Established 2024 · London
+    </p>
+
+    {/* Contact Info */}
+<p className="mt-10 text-lg text-[#FFE29A] font-light">
+  For inquiries:&nbsp;
+  <a
+    href="mailto:contact@solarmusicgroup.com"
+    className="text-[#FFD166] font-medium drop-shadow-[0_0_10px_rgba(255,200,60,0.7)] 
+               hover:text-[#FFE29A] transition-all duration-300"
+  >
+    contact@solarmusicgroup.com
+  </a>
+</p>
+
+
+
+  </div>
+
+  {/* Footer */}
+  <div
+    className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1500 delay-300 ease-out ${
+      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+    }`}
+  >
+    <p className="text-sm text-[#FFD166] drop-shadow-[0_0_8px_rgba(255,200,60,0.6)]">
+      © 2025 Solar Music Group LTD.
+      <h1 className="text-[#FFD166] animate-[solarGlow_3s_ease-in-out_infinite]"></h1>
+    </p>
   </div>
 </div>
 
 
-      {/* Main Content */}
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 text-center">
-        <div
-          className={`transition-all duration-1500 ease-out transform ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
-          }`}
-        >
-          {/* Main Heading */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8 text-white leading-tight max-w-4xl">
-            Independent record label &<br />
-            distributor.
-          </h1>
 
-          {/* Description */}
-          <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto font-light leading-relaxed">
-            Solar Music Group uncovers hidden potential in music, turning legal
-            <br className="hidden md:block" />
-            challenges into opportunities for both artists and brands. Join our
-            team
-            <br className="hidden md:block" />
-            of 30+ talented artists today!
-          </p>
-
-          {/* Established */}
-          <p className="text-sm text-gray-500 mb-10 tracking-wide">
-            Established 2024 · London
-          </p>
-
-          {/* CTA Button */}
-          <button
-            onClick={() => setIsModalOpen(true)}
-            className="inline-flex items-center gap-2 px-8 py-4 text-base font-medium text-gray-900 bg-white rounded-full transition-all duration-300 hover:bg-gray-100 hover:scale-105"
-          >
-            <Mail className="w-5 h-5" />
-            <span>Contact Us</span>
-          </button>
-        </div>
-
-        {/* Footer */}
-        <div
-          className={`absolute bottom-8 left-1/2 transform -translate-x-1/2 transition-all duration-1500 delay-300 ease-out ${
-            isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
-          }`}
-        >
-          <p className="text-sm text-gray-600">© 2025 Solar Music Group LLC.</p>
-        </div>
-      </div>
 
       {/* Modal */}
-      {isModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fade-in">
-          <div className="relative w-full max-w-lg bg-gray-900 rounded-2xl shadow-2xl border border-gray-800 animate-scale-in max-h-[90vh] overflow-y-auto">
-            {/* Close Button */}
-            <button
-              onClick={() => setIsModalOpen(false)}
-              className="absolute top-4 right-4 p-2 text-gray-400 hover:text-white transition-colors rounded-full hover:bg-white/10"
-            >
-              <X className="w-6 h-6" />
-            </button>
+{isModalOpen && (
+  <div
+    onClick={() => setIsModalOpen(false)} // Click anywhere outside to close
+    className="fixed inset-0 z-50 flex items-center justify-center p-6 bg-black/80 backdrop-blur-md animate-fade-in"
+  >
+    <div
+      onClick={(e) => e.stopPropagation()} // Prevent click inside from closing
+      className="relative w-full max-w-lg bg-gray-900/40 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-[0_0_35px_rgba(255,200,60,0.15)] animate-scale-in max-h-[90vh] overflow-y-auto"
+    >
+      {/* Close Button */}
+      <button
+        onClick={() => setIsModalOpen(false)}
+        className="absolute top-4 right-4 p-2 text-gray-400 hover:text-[#FFD166] transition-all rounded-full hover:bg-[#FFD166]/10 hover:scale-110"
+      >
+        <X className="w-6 h-6" />
+      </button>
 
-            <div className="p-6">
-              <h2 className="text-2xl font-bold mb-2 text-white">
-                Submit Your Music
-              </h2>
-              <p className="text-gray-400 mb-6">We'd love to hear from you</p>
+      {/* Content */}
+      <div className="p-8">
+        <h2 className="text-3xl font-extrabold text-[#FFD166] mb-3 drop-shadow-[0_0_12px_rgba(255,200,60,0.7)]">
+          Submit Your Music
+        </h2>
+        <p className="text-gray-400 mb-8 text-sm">
+          Share your best tracks with Solar Music Group. We review every submission carefully.
+        </p>
 
-              {isSubmitted ? (
-                <div className="text-center py-8 animate-fade-in">
-                  <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white mb-4">
-                    <Mail className="w-8 h-8 text-gray-900" />
-                  </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">
-                    Thanks for submitting!
-                  </h3>
-                  <p className="text-gray-400">
-                    We'll review your music and get back to you soon.
-                  </p>
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  {/* Name */}
-                  <div>
-                    <label
-                      htmlFor="name"
-                      className="block text-sm font-medium text-gray-300 mb-2"
-                    >
-                      Name / Stage Name *
-                    </label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
-                      placeholder="Your name or artist name"
-                    />
-                  </div>
-
-                  {/* Email */}
-                  <div>
-                    <label
-                      htmlFor="email"
-                      className="block text-sm font-medium text-gray-300 mb-2"
-                    >
-                      Email Address *
-                    </label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      required
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
-                      placeholder="your@email.com"
-                    />
-                  </div>
-
-                  {/* Music Links */}
-                  <div>
-                    <label
-                      htmlFor="musicLinks"
-                      className="block text-sm font-medium text-gray-300 mb-2"
-                    >
-                      Music Links *
-                    </label>
-                    <textarea
-                      id="musicLinks"
-                      name="musicLinks"
-                      required
-                      rows={2}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors resize-none"
-                      placeholder="Spotify, SoundCloud, YouTube, etc."
-                    />
-                  </div>
-
-                  {/* Social Media */}
-                  <div>
-                    <label
-                      htmlFor="socialMedia"
-                      className="block text-sm font-medium text-gray-300 mb-2"
-                    >
-                      Social Media Links
-                    </label>
-                    <textarea
-                      id="socialMedia"
-                      name="socialMedia"
-                      rows={2}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors resize-none"
-                      placeholder="Instagram, TikTok, Twitter, etc."
-                    />
-                  </div>
-
-                  {/* Message/Bio */}
-                  <div>
-                    <label
-                      htmlFor="message"
-                      className="block text-sm font-medium text-gray-300 mb-2"
-                    >
-                      Message / Bio (Optional)
-                    </label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      rows={3}
-                      className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors resize-none"
-                      placeholder="Tell us about yourself and your music..."
-                    />
-                  </div>
-
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    className="w-full py-4 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300"
-                  >
-                    Submit
-                  </button>
-                </form>
-              )}
+        {isSubmitted ? (
+          <div className="text-center py-10 animate-fade-in">
+            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-[#FFD166] mb-4 shadow-[0_0_25px_rgba(255,200,60,0.6)]">
+              <Mail className="w-8 h-8 text-gray-900" />
             </div>
+            <h3 className="text-2xl font-bold text-[#FFD166] mb-2">
+              Thanks for submitting!
+            </h3>
+            <p className="text-gray-400">We'll get back to you soon.</p>
           </div>
-        </div>
-      )}
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {[
+              { id: "name", label: "Name / Stage Name *", type: "text", placeholder: "Your artist name" },
+              { id: "email", label: "Email Address *", type: "email", placeholder: "your@email.com" },
+            ].map((field) => (
+              <div key={field.id} className="relative group">
+                <input
+                  type={field.type}
+                  id={field.id}
+                  name={field.id}
+                  required
+                  placeholder=" "
+                  className="peer w-full px-4 py-4 bg-gray-800/60 border border-gray-700 rounded-lg text-white placeholder-transparent 
+                             focus:outline-none focus:border-[#FFD166] focus:ring-1 focus:ring-[#FFD166] transition-all duration-300"
+                />
+                <label
+                  htmlFor={field.id}
+                  className="absolute left-4 top-3.5 text-gray-400 text-sm transition-all duration-300 
+                             peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-500 
+                             peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-[#FFD166] peer-focus:text-sm"
+                >
+                  {field.label}
+                </label>
+              </div>
+            ))}
+
+            <div className="relative group">
+              <textarea
+                id="musicLinks"
+                name="musicLinks"
+                required
+                rows={2}
+                placeholder=" "
+                className="peer w-full px-4 py-4 bg-gray-800/60 border border-gray-700 rounded-lg text-white placeholder-transparent 
+                           focus:outline-none focus:border-[#FFD166] focus:ring-1 focus:ring-[#FFD166] transition-all duration-300 resize-none"
+              />
+              <label
+                htmlFor="musicLinks"
+                className="absolute left-4 top-3.5 text-gray-400 text-sm transition-all duration-300 
+                           peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-500 
+                           peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-[#FFD166] peer-focus:text-sm"
+              >
+                Music Links *
+              </label>
+            </div>
+
+            <div className="relative group">
+              <textarea
+                id="message"
+                name="message"
+                rows={3}
+                placeholder=" "
+                className="peer w-full px-4 py-4 bg-gray-800/60 border border-gray-700 rounded-lg text-white placeholder-transparent 
+                           focus:outline-none focus:border-[#FFD166] focus:ring-1 focus:ring-[#FFD166] transition-all duration-300 resize-none"
+              />
+              <label
+                htmlFor="message"
+                className="absolute left-4 top-3.5 text-gray-400 text-sm transition-all duration-300 
+                           peer-placeholder-shown:top-4 peer-placeholder-shown:text-gray-500 
+                           peer-placeholder-shown:text-base peer-focus:top-1 peer-focus:text-[#FFD166] peer-focus:text-sm"
+              >
+                Message / Bio (Optional)
+              </label>
+            </div>
+
+            {/* Submit Button */}
+            <button
+              type="submit"
+              className="w-full py-4 font-semibold text-gray-900 bg-[#FFD166] rounded-lg 
+                         shadow-[0_0_20px_rgba(255,200,60,0.8)] hover:shadow-[0_0_35px_rgba(255,200,60,1)] 
+                         hover:scale-[1.03] transition-all duration-300 animate-[solarPulse_3s_ease-in-out_infinite]"
+            >
+              Submit
+            </button>
+          </form>
+        )}
+      </div>
+    </div>
+  </div>
+)}
+
+<style>
+  {`
+    @keyframes solarPulse {
+      0%, 100% { filter: drop-shadow(0 0 10px rgba(255,200,60,0.5)); }
+      50% { filter: drop-shadow(0 0 25px rgba(255,200,60,1)); }
+    }
+  `}
+</style>
+
+  
     </div>
   );
 }
