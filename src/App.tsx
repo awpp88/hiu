@@ -97,7 +97,7 @@ function App() {
     />
     {/* Optional text below the logo */}
     <h2 className="mt-2 text-xl sm:text-2xl font-bold text-white tracking-tight text-center">
-      Solar Music Group
+      
     </h2>
   </div>
 </div>
