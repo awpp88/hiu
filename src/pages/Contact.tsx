@@ -69,14 +69,7 @@ function Contact() {
         <X className="w-6 h-6" />
       </Link>
 
-      {/* Logo */}
-      <div className="fixed top-10 left-1/2 -translate-x-1/2 z-20">
-        <img
-          src="/logosolar.png"
-          alt="Solar Music Group Logo"
-          className="w-32 sm:w-40 md:w-44 mx-auto drop-shadow-[0_0_20px_rgba(251,191,36,0.5)]"
-        />
-      </div>
+      
 
       {/* Floating decorative elements */}
       <div className="absolute top-20 left-10 w-2 h-2 bg-amber-400/30 rounded-full blur-sm animate-float"></div>
